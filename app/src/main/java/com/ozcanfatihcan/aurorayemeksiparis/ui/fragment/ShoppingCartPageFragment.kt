@@ -10,8 +10,9 @@ import androidx.fragment.app.viewModels
 import com.ozcanfatihcan.aurorayemeksiparis.R
 import com.ozcanfatihcan.aurorayemeksiparis.databinding.FragmentShoppingCartPageBinding
 import com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel.ShoppingCartPageViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ShoppingCartPageFragment : Fragment() {
     private lateinit var binding: FragmentShoppingCartPageBinding
     private lateinit var viewModel:ShoppingCartPageViewModel

@@ -10,8 +10,9 @@ import androidx.fragment.app.viewModels
 import com.ozcanfatihcan.aurorayemeksiparis.R
 import com.ozcanfatihcan.aurorayemeksiparis.databinding.FragmentFavoritePageBinding
 import com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel.FavoritePageViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class FavoritePageFragment : Fragment() {
     private lateinit var binding: FragmentFavoritePageBinding
     private lateinit var viewModel:FavoritePageViewModel

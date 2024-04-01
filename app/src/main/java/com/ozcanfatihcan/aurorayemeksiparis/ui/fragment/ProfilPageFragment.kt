@@ -10,8 +10,9 @@ import androidx.fragment.app.viewModels
 import com.ozcanfatihcan.aurorayemeksiparis.R
 import com.ozcanfatihcan.aurorayemeksiparis.databinding.FragmentProfilPageBinding
 import com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel.ProfilPageViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ProfilPageFragment : Fragment() {
     private lateinit var binding:FragmentProfilPageBinding
     private lateinit var viewModel:ProfilPageViewModel

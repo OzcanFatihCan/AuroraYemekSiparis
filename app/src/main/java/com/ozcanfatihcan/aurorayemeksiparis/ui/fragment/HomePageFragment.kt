@@ -10,8 +10,9 @@ import androidx.fragment.app.viewModels
 import com.ozcanfatihcan.aurorayemeksiparis.R
 import com.ozcanfatihcan.aurorayemeksiparis.databinding.FragmentHomePageBinding
 import com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel.HomePageViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class HomePageFragment : Fragment() {
     private lateinit var binding: FragmentHomePageBinding
     private lateinit var viewModel:HomePageViewModel

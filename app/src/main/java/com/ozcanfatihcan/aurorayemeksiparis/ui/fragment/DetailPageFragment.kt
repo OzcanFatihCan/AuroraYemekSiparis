@@ -10,8 +10,10 @@ import androidx.fragment.app.viewModels
 import com.ozcanfatihcan.aurorayemeksiparis.R
 import com.ozcanfatihcan.aurorayemeksiparis.databinding.FragmentDetailPageBinding
 import com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel.DetailPageViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class DetailPageFragment : Fragment() {
     private lateinit var binding: FragmentDetailPageBinding
     private lateinit var viewModel:DetailPageViewModel

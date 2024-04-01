@@ -1,4 +1,8 @@
 package com.ozcanfatihcan.aurorayemeksiparis.di
 
-class HiltApplication {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class HiltApplication:Application() {
 }

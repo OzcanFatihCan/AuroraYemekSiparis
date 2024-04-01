@@ -1,6 +1,10 @@
 package com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel
 
 import androidx.lifecycle.ViewModel
+import com.ozcanfatihcan.aurorayemeksiparis.data.repo.ShopCartRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class ShoppingCartPageViewModel: ViewModel() {
+@HiltViewModel
+class ShoppingCartPageViewModel@Inject constructor (var shopCartRepository: ShopCartRepository): ViewModel() {
 }
