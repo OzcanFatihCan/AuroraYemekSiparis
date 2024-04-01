@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homePageFragment">
+
+    <fragment
+        android:id="@+id/detailPageFragment"
+        android:name="com.ozcanfatihcan.aurorayemeksiparis.ui.fragment.DetailPageFragment"
+        android:label="DetailPageFragment" >
+        <action
+            android:id="@+id/gotoShoppingCartByDetail"
+            app:destination="@id/shoppingCartPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritePageFragment"
+        android:name="com.ozcanfatihcan.aurorayemeksiparis.ui.fragment.FavoritePageFragment"
+        android:label="FavoritePageFragment" />
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="com.ozcanfatihcan.aurorayemeksiparis.ui.fragment.HomePageFragment"
+        android:label="HomePageFragment" >
+        <action
+            android:id="@+id/gotoDetailFragment"
+            app:destination="@id/detailPageFragment" />
+        <action
+            android:id="@+id/gotoShoppingCartByHome"
+            app:destination="@id/shoppingCartPageFragment" />
+        <action
+            android:id="@+id/gotoFavoriteFragment"
+            app:destination="@id/favoritePageFragment" />
+        <action
+            android:id="@+id/gotoProfilFragment"
+            app:destination="@id/profilPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilPageFragment"
+        android:name="com.ozcanfatihcan.aurorayemeksiparis.ui.fragment.ProfilPageFragment"
+        android:label="ProfilPageFragment" />
+    <fragment
+        android:id="@+id/shoppingCartPageFragment"
+        android:name="com.ozcanfatihcan.aurorayemeksiparis.ui.fragment.ShoppingCartPageFragment"
+        android:label="ShoppingCartPageFragment" />
+</navigation>

@@ -7,4 +7,6 @@
     <color name="bluePeriod">#055159</color>
     <color name="blueSyzygy">#1D4859</color>
     <color name="kuretakeBlackManga">#011826</color>
+
+    <color name="toolBar">#055159</color>
 </resources>
