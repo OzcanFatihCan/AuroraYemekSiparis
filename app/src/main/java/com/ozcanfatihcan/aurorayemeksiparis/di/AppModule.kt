@@ -4,6 +4,8 @@ import com.ozcanfatihcan.aurorayemeksiparis.data.datasource.FoodDataSource
 import com.ozcanfatihcan.aurorayemeksiparis.data.datasource.ShopCartDataSource
 import com.ozcanfatihcan.aurorayemeksiparis.data.repo.FoodRepository
 import com.ozcanfatihcan.aurorayemeksiparis.data.repo.ShopCartRepository
+import com.ozcanfatihcan.aurorayemeksiparis.retrofit.ApiUtils
+import com.ozcanfatihcan.aurorayemeksiparis.retrofit.FoodDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -15,8 +17,14 @@ import javax.inject.Singleton
 class AppModule {
     @Provides
     @Singleton
-    fun provideFoodDataSource():FoodDataSource{
-        return FoodDataSource()
+    fun provideFoodDao():FoodDao{
+        return ApiUtils.getFoodDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideFoodDataSource(fDao:FoodDao):FoodDataSource{
+        return FoodDataSource(fDao)
     }
     @Provides
     @Singleton
