@@ -27,12 +27,6 @@
         <action
             android:id="@+id/gotoShoppingCartByHome"
             app:destination="@id/shoppingCartPageFragment" />
-        <action
-            android:id="@+id/gotoFavoriteFragment"
-            app:destination="@id/favoritePageFragment" />
-        <action
-            android:id="@+id/gotoProfilFragment"
-            app:destination="@id/profilPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/profilPageFragment"
