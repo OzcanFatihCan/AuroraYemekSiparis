@@ -9,4 +9,9 @@
     <color name="kuretakeBlackManga">#011826</color>
 
     <color name="toolBar">#055159</color>
+    <color name="text1">#1D4859</color>
+    <color name="text2">#FFFFFFFF</color>
+    <color name="bgColor">#FFFFFFFF</color>
+    <color name="addedButton">#6CD9BA</color>
+    <color name="cardColor">#097373</color>
 </resources>

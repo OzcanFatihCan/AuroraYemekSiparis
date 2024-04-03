@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import com.ozcanfatihcan.aurorayemeksiparis.R
 import com.ozcanfatihcan.aurorayemeksiparis.databinding.FragmentHomePageBinding
+import com.ozcanfatihcan.aurorayemeksiparis.ui.adapter.FoodAdapter
 import com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel.HomePageViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -21,6 +22,14 @@ class HomePageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding=DataBindingUtil.inflate(inflater,R.layout.fragment_home_page,container,false)
+        binding.homePageObject=this
+
+
+        viewModel.foodList.observe(viewLifecycleOwner){
+            binding.foodAdapter= FoodAdapter(requireContext(),it,viewModel)
+        }
+
+
         return binding.root
     }
 
@@ -28,5 +37,10 @@ class HomePageFragment : Fragment() {
         super.onCreate(savedInstanceState)
         val tempViewModel:HomePageViewModel by viewModels()
         viewModel=tempViewModel
+    }
+
+    override fun onResume() {
+        super.onResume()
+        viewModel.getFood()
     }
 }
