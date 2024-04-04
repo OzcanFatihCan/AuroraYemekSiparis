@@ -11,6 +11,8 @@
     <color name="toolBar">#011826</color>
     <color name="text1">#6CD9BA</color>
     <color name="text2">#FFFFFFFF</color>
+    <color name="text3">#011826</color>
+    <color name="textSubtext">#BFBFBF</color>
     <color name="bgColor">#1D4859</color>
     <color name="addedButton">#6CD9BA</color>
     <color name="cardColor">#097373</color>

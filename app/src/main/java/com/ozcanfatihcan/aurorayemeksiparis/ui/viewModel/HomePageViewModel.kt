@@ -1,6 +1,7 @@
 package com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel
 
 import android.util.Log
+
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ozcanfatihcan.aurorayemeksiparis.data.entity.Food
@@ -13,7 +14,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class HomePageViewModel @Inject constructor (var foodRepository: FoodRepository): ViewModel() {
-    val foodList=MutableLiveData<List<Food>>()
+    val foodList = MutableLiveData<List<Food>>()
 
     init {
         getFood()
@@ -27,5 +28,18 @@ class HomePageViewModel @Inject constructor (var foodRepository: FoodRepository)
             }
         }
     }
+
+    fun searchFood(searchWord:String){
+        CoroutineScope(Dispatchers.Main).launch {
+            try {
+               // foodList.value=foodRepository.searchFood(searchWord)
+
+            }catch (e:Exception){
+
+            }
+        }
+    }
+
+
 
 }

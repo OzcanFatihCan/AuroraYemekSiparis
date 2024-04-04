@@ -31,47 +31,49 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/titleHome"
-            android:layout_width="206dp"
-            android:layout_height="44dp"
-            android:layout_marginTop="8dp"
-            android:fontFamily="@font/lobster"
-            android:text="@string/aurora"
-            android:textColor="@color/text1"
-            android:textSize="40sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/homeToolbar" />
-
         <SearchView
             android:id="@+id/searchView"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="12dp"
             android:layout_marginEnd="8dp"
             android:background="@color/white"
             android:elevation="2dp"
             android:queryHint="Ara"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/titleHome" />
+            app:layout_constraintTop_toBottomOf="@+id/textHome" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/homeRecycler"
-            android:adapter="@{foodAdapter}"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-            android:orientation="vertical"
-            app:spanCount="2"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="12dp"
+            android:adapter="@{foodAdapter}"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/searchView" />
+            app:layout_constraintTop_toBottomOf="@+id/searchView"
+            app:spanCount="2" />
+
+        <TextView
+            android:id="@+id/textHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/lobster"
+            android:text="@string/aurora"
+            android:textColor="@color/text1"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/homeToolbar" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

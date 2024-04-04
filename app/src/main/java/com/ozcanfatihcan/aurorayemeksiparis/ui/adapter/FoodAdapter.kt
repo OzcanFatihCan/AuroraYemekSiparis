@@ -4,12 +4,15 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.ozcanfatihcan.aurorayemeksiparis.R
 import com.ozcanfatihcan.aurorayemeksiparis.data.entity.Food
 import com.ozcanfatihcan.aurorayemeksiparis.databinding.HomeCardDesignBinding
+import com.ozcanfatihcan.aurorayemeksiparis.ui.fragment.HomePageFragmentDirections
 import com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel.HomePageViewModel
+import com.ozcanfatihcan.aurorayemeksiparis.util.gecisYap
 
 class FoodAdapter(var mContext:Context, var foodList: List<Food>,var viewModel:HomePageViewModel):RecyclerView.Adapter<FoodAdapter.FoodCardDesignHolder>() {
 
@@ -27,10 +30,11 @@ class FoodAdapter(var mContext:Context, var foodList: List<Food>,var viewModel:H
         d.foodObject=food
 
         val url= "http://kasimadalan.pe.hu/yemekler/resimler/${food.yemek_resim_adi}"
-        Glide.with(mContext).load(url).override(300,300).into(d.imageFood)
+        Glide.with(mContext).load(url).override(500,700).into(d.imageFood)
 
         d.homeCard.setOnClickListener {
-
+            val transition=HomePageFragmentDirections.gotoDetailFragment(food=food)
+            Navigation.gecisYap(it,transition)
         }
 
         d.addButtonCard.setOnClickListener {

@@ -12,6 +12,9 @@
         <action
             android:id="@+id/gotoShoppingCartByDetail"
             app:destination="@id/shoppingCartPageFragment" />
+        <argument
+            android:name="food"
+            app:argType="com.ozcanfatihcan.aurorayemeksiparis.data.entity.Food" />
     </fragment>
     <fragment
         android:id="@+id/favoritePageFragment"

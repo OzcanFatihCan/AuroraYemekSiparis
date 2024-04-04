@@ -18,10 +18,11 @@
             android:id="@+id/home_card"
             android:layout_width="180dp"
             android:layout_height="290dp"
-            android:layout_margin="8dp"
-            android:elevation="5dp"
+            android:layout_margin="6dp"
+            android:elevation="4dp"
             app:cardBackgroundColor="@color/cardColor"
-            app:cardCornerRadius="30dp">
+            app:cardCornerRadius="30dp"
+            app:cardElevation="4dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/mainCardConstraint"
@@ -88,7 +89,7 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="54dp"
+                    android:layout_marginTop="44dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toTopOf="@+id/textFoodName"
@@ -102,9 +103,9 @@
                     android:id="@+id/favButton"
                     android:layout_width="36dp"
                     android:layout_height="36dp"
+                    android:layout_marginStart="12dp"
                     android:layout_marginTop="12dp"
-                    android:layout_marginEnd="12dp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/favorite_empty_icon" />
 

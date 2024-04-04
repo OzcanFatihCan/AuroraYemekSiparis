@@ -7,4 +7,6 @@ class FoodRepository(var foodDataSource: FoodDataSource) {
 
     suspend fun getFood():List<Food> = foodDataSource.getFood()
 
+    suspend fun searchFood(searchWord:String):List<Food> =foodDataSource.searchFood(searchWord)
+
 }
