@@ -12,4 +12,7 @@
     <string name="timeInfo">25-45 Mins</string>
     <string name="addCart">ADD TO CART</string>
     <string name="totalPrice">Total Price</string>
+    <string name="shoppingCartTitle">Shopping Cart</string>
+    <string name="pricePiece">Price:</string>
+    <string name="piece">Piece:</string>
 </resources>

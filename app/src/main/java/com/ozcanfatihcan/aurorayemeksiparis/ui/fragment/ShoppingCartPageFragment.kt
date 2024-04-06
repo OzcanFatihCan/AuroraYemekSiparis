@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.ozcanfatihcan.aurorayemeksiparis.R
 import com.ozcanfatihcan.aurorayemeksiparis.databinding.FragmentShoppingCartPageBinding
 import com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel.ShoppingCartPageViewModel
@@ -21,6 +22,10 @@ class ShoppingCartPageFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding=DataBindingUtil.inflate(inflater,R.layout.fragment_shopping_cart_page, container, false)
+        binding.shoppinCartPageObject=this
+
+
+
         return binding.root
     }
 
@@ -28,5 +33,9 @@ class ShoppingCartPageFragment : Fragment() {
         super.onCreate(savedInstanceState)
         val tempViewModel:ShoppingCartPageViewModel by viewModels()
         viewModel=tempViewModel
+    }
+
+    fun processBackPress(){
+        findNavController().navigateUp()
     }
 }
