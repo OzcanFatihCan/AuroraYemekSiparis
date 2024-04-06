@@ -28,7 +28,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@android:drawable/ic_menu_camera"></ImageView>
+            app:srcCompat="@android:drawable/ic_menu_camera"/>
 
         <androidx.cardview.widget.CardView
             android:id="@+id/foodDetailCard"
@@ -204,6 +204,7 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="16dp"
+                    android:onClick='@{() -> detailObject.pieceControl("+",textPiece,textTotalPrice,foodObject.yemek_fiyat)}'
                     app:cardBackgroundColor="@color/addedButton"
                     app:cardCornerRadius="30dp"
                     app:layout_constraintEnd_toStartOf="@+id/textPiece"
@@ -236,6 +237,7 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="32dp"
+                    android:onClick='@{() -> detailObject.pieceControl("-",textPiece,textTotalPrice,foodObject.yemek_fiyat)}'
                     app:cardBackgroundColor="@color/addedButton"
                     app:cardCornerRadius="30dp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -256,7 +258,7 @@
             android:id="@+id/favButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="78dp"
             android:layout_marginEnd="16dp"
             app:cardBackgroundColor="@color/cardColor"
             app:cardCornerRadius="30dp"
@@ -276,8 +278,9 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="78dp"
             android:elevation="5dp"
+            android:onClick="@{() -> detailObject.processBackPress()}"
             app:cardBackgroundColor="@color/cardColor"
             app:cardCornerRadius="30dp"
             app:layout_constraintStart_toStartOf="parent"

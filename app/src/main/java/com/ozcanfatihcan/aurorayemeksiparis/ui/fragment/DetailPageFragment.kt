@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.ozcanfatihcan.aurorayemeksiparis.R
@@ -30,6 +32,8 @@ class DetailPageFragment : Fragment() {
 
         binding.foodObject=foodValue
 
+
+
         val url= "http://kasimadalan.pe.hu/yemekler/resimler/${foodValue.yemek_resim_adi}"
         Glide.with(this).load(url).override(500,700).into(binding.imageDetailFood)
 
@@ -42,4 +46,10 @@ class DetailPageFragment : Fragment() {
         viewModel=tempViewModel
     }
 
+    fun pieceControl(buttonType:String,textPiece:TextView,textTotal:TextView,price:Int){
+        viewModel.pieceStatusControl(buttonType,textPiece,textTotal,price)
+    }
+    fun processBackPress(){
+        findNavController().navigateUp()
+    }
 }
