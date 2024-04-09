@@ -4,7 +4,7 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
-    //id("com.google.gms.google-services")
+    id("com.google.gms.google-services")
 
 }
 
@@ -73,10 +73,10 @@ dependencies {
 
     //glide
     implementation("com.github.bumptech.glide:glide:4.13.2")
-    /*
+
     //firebase
     implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
     //firebaseFirestore & authentication
     implementation("com.google.firebase:firebase-firestore:24.11.0")
-    implementation("com.google.firebase:firebase-auth:22.3.1")*/
+    implementation("com.google.firebase:firebase-auth:22.3.1")
 }
