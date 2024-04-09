@@ -8,11 +8,13 @@ import android.view.ViewGroup
 import android.widget.SearchView.OnQueryTextListener
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
+import androidx.navigation.Navigation
 import com.ozcanfatihcan.aurorayemeksiparis.R
 import com.ozcanfatihcan.aurorayemeksiparis.data.entity.Food
 import com.ozcanfatihcan.aurorayemeksiparis.databinding.FragmentHomePageBinding
 import com.ozcanfatihcan.aurorayemeksiparis.ui.adapter.FoodAdapter
 import com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel.HomePageViewModel
+import com.ozcanfatihcan.aurorayemeksiparis.util.gecisYap
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -52,6 +54,9 @@ class HomePageFragment : Fragment() {
         super.onCreate(savedInstanceState)
         val tempViewModel:HomePageViewModel by viewModels()
         viewModel=tempViewModel
+    }
+    fun shoppingTransition(it:View){
+        Navigation.gecisYap(it,R.id.shoppingCartPageFragment)
     }
 
 

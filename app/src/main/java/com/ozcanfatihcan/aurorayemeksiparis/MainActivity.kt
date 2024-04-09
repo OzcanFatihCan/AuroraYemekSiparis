@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         binding=DataBindingUtil.setContentView(this,R.layout.activity_main)
 
-        window.statusBarColor = getResources().getColor(R.color.toolBar)
+        //window.statusBarColor = getResources().getColor(R.color.toolBar)
         val navHostFragment=supportFragmentManager.findFragmentById(R.id.mainFragmentContainer) as NavHostFragment
         NavigationUI.setupWithNavController(binding.MainBottomNav,navHostFragment.navController)
     }

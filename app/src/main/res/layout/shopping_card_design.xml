@@ -144,7 +144,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="12dp"
-                    android:text="@{Integer.t}"
+                    android:text="@{Integer.toString(shopCartFoodObject.yemek_siparis_adet)}"
                     android:textColor="@color/text2"
                     android:textSize="16sp"
                     android:textStyle="bold"

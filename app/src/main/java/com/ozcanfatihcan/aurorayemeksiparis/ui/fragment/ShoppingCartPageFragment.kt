@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.ozcanfatihcan.aurorayemeksiparis.R
 import com.ozcanfatihcan.aurorayemeksiparis.databinding.FragmentShoppingCartPageBinding
+import com.ozcanfatihcan.aurorayemeksiparis.ui.adapter.ShoppingCartAdapter
 import com.ozcanfatihcan.aurorayemeksiparis.ui.viewModel.ShoppingCartPageViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,7 +25,9 @@ class ShoppingCartPageFragment : Fragment() {
         binding=DataBindingUtil.inflate(inflater,R.layout.fragment_shopping_cart_page, container, false)
         binding.shoppinCartPageObject=this
 
-
+        viewModel.shoppingList.observe(viewLifecycleOwner){
+            binding.shoppingAdapter= ShoppingCartAdapter(requireContext(),it,viewModel)
+        }
 
         return binding.root
     }

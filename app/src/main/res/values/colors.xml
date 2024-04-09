@@ -21,4 +21,5 @@
     <color name="deleteButtonColor">#FFFFFFFF</color>
     <color name="dividerColor">#FFFFFFFF</color>
     <color name="deliveryIconColor">#FFFFFFFF</color>
+    <color name="shoppingCartColor">#FFFFFFFF</color>
 </resources>

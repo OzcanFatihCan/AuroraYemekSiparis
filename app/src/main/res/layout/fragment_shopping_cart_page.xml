@@ -8,8 +8,8 @@
         name="shoppinCartPageObject"
         type="com.ozcanfatihcan.aurorayemeksiparis.ui.fragment.ShoppingCartPageFragment" />
     <variable
-        name="shopCartFoodObject"
-        type="com.ozcanfatihcan.aurorayemeksiparis.data.entity.ShopCartFood" />
+        name="shoppingAdapter"
+        type="com.ozcanfatihcan.aurorayemeksiparis.ui.adapter.ShoppingCartAdapter" />
 
     </data>
 
@@ -69,6 +69,8 @@
             android:id="@+id/shoppingCartRv"
             android:layout_width="409dp"
             android:layout_height="593dp"
+            android:adapter="@{shoppingAdapter}"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
